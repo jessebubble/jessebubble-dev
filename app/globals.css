@@ -3,24 +3,211 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --rose: #e11d48;
+  --rose-dim: #9f1239;
+  --rose-light: #fb7185;
+  --muted: #a3a3a3;
+  --border: #e5e5e5;
+  --surface: #f5f5f5;
+  --surface-light: #fafafa;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --color-rose: var(--rose);
+  --color-rose-dim: var(--rose-dim);
+  --color-rose-light: var(--rose-light);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-surface: var(--surface);
+  --color-surface-light: var(--surface-light);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-pixel: var(--font-geist-pixel-square);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color-scheme: light;
+  font-family: var(--font-geist-pixel-square), var(--font-geist-mono), monospace;
+}
+
+/* Terminal cursor blink */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scanline effect — rose tinted */
+.scanline::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    transparent 50%,
+    rgba(225, 29, 72, 0.03) 50%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Glow effect — rose */
+.text-glow {
+  text-shadow: 0 0 8px rgba(225, 29, 72, 0.6), 0 0 20px rgba(225, 29, 72, 0.2);
+}
+
+.text-glow-white {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth scroll for terminal output */
+.terminal-output {
+  scrollbar-width: thin;
+  scrollbar-color: var(--rose-dim) transparent;
+}
+
+.terminal-output::-webkit-scrollbar {
+  width: 4px;
+}
+
+.terminal-output::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.terminal-output::-webkit-scrollbar-thumb {
+  background: var(--rose-dim);
+  border-radius: 2px;
+}
+
+/* ASCII art canvas */
+.ascii-art {
+  line-height: 1.1;
+  letter-spacing: 0.05em;
+}
+
+/* ASCII image canvas */
+.ascii-canvas {
+  image-rendering: pixelated;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Stagger children */
+.stagger-children > * {
+  opacity: 0;
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+
+/* Pixel font for headings */
+.font-pixel {
+  font-family: var(--font-geist-pixel-square), monospace;
+}
+
+/* Gritty hero image effects */
+.gritty-scanlines {
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.03) 2px,
+    rgba(0, 0, 0, 0.03) 4px
+  );
+}
+
+.gritty-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+.gritty-vignette {
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+}
+
+.gritty-image {
+  position: relative;
+}
+
+.gritty-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid var(--border);
+  pointer-events: none;
+}
+
+/* Mascot glow effects */
+@keyframes mascotPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 0.8; }
+}
+
+.mascot-glow {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(225, 29, 72, 0.25) 0%,
+    rgba(225, 29, 72, 0.08) 50%,
+    transparent 70%
+  );
+  filter: blur(12px);
+  animation: mascotPulse 3s ease-in-out infinite;
+}
+
+.mascot-glow-outer {
+  background: radial-gradient(
+    ellipse at center,
+    rgba(251, 113, 133, 0.15) 0%,
+    rgba(225, 29, 72, 0.05) 40%,
+    transparent 70%
+  );
+  filter: blur(24px);
+}
+
+/* Physics text — interactive typography */
+.physics-letter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font: 16px/28px ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  color: var(--foreground);
+  opacity: 0.4;
+  white-space: pre;
+  will-change: transform;
+  user-select: none;
+  pointer-events: none;
+}
+
+.physics-draggable {
+  opacity: 0.6;
+  cursor: grab;
+  pointer-events: auto;
+}
+
+.physics-dragging {
+  opacity: 1;
+  color: var(--rose);
+  cursor: grabbing;
 }
