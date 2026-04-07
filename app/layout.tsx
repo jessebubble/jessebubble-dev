@@ -1,12 +1,63 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GeistMono } from "geist/font/mono";
 import { GeistPixelSquare, GeistPixelGrid, GeistPixelCircle, GeistPixelTriangle, GeistPixelLine } from 'geist/font/pixel';
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "jessebubble — Developer Portfolio",
-  description: "Find your people. Build your future. San Antonio native and software developer bridging creativity and technical execution.",
+const siteUrl = "https://jessebubble.dev";
+
+export const viewport: Viewport = {
   themeColor: "#ffffff",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "jessebubble — Developer Portfolio",
+    template: "%s | jessebubble",
+  },
+  description:
+    "Find your people. Build your future. San Antonio native and software developer bridging creativity and technical execution.",
+  keywords: [
+    "jessebubble",
+    "developer",
+    "portfolio",
+    "San Antonio",
+    "software engineer",
+    "web developer",
+    "React",
+    "Next.js",
+  ],
+  authors: [{ name: "jessebubble", url: siteUrl }],
+  creator: "jessebubble",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteUrl,
+    siteName: "jessebubble",
+    title: "jessebubble — Developer Portfolio",
+    description:
+      "Find your people. Build your future. San Antonio native and software developer bridging creativity and technical execution.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "jessebubble — Developer Portfolio",
+    description:
+      "Find your people. Build your future. San Antonio native and software developer bridging creativity and technical execution.",
+    creator: "@jessebubble",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
