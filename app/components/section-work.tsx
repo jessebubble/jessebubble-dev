@@ -16,18 +16,18 @@ const PROJECTS: Project[] = [
     tag: 'Community',
     description:
       'Unifying the San Antonio tech ecosystem. Strategic partnerships with Geekdom, Tech Bloc, UTSA UC, PyTexas Foundation, and the Latina Leadership Institute — mobilizing resources for local builders.',
-    stack: ['Ops', 'Partnerships', 'Events'],
+    stack: ['Bounties', 'Partnerships', 'Events'],
     live: 'https://devsa.community',
-    repo: null,
+    repo: 'https://github.com/devsanantonio/next-devsa',
     slug: 'devsa',
   },
   {
-    title: '434 Media',
+    title: '434 MEDIA',
     role: 'Lead Developer & Technical Architect',
     tag: 'Agency Platform',
     description:
       'Digital platform for the agency — editorial storytelling, design system, and custom CMS powering work for venture-backed startups and ecosystem leaders.',
-    stack: ['Next.js', 'TypeScript', 'Tailwind', 'CMS'],
+    stack: ['Next.js', 'Claude Code', 'TailwindCSS', 'Firebase'],
     live: 'https://434media.com',
     repo: 'https://github.com/434media/next-434media',
     slug: 'next-434media',
@@ -38,19 +38,19 @@ const PROJECTS: Project[] = [
     tag: 'Event Platform',
     description:
       "Engineered the digital presence for SA's largest non-dilutive $100K pitch competition and multi-track community summit. Custom auth, admin dashboards, attendee flows.",
-    stack: ['Next.js', 'Auth', 'Admin UI', 'Postgres'],
+    stack: ['Next.js', 'Firebase', 'Admin UI', 'Adobe Illustrator'],
     live: 'https://www.sanantoniotechday.com',
     repo: 'https://github.com/434media/techday',
     slug: 'techday',
   },
   {
-    title: 'TXMX',
+    title: 'TXMX Boxing',
     role: 'Lead Developer',
     tag: 'Custom Platform',
     description:
       'Custom platform with creative UI, role-based auth, and admin dashboards — built to manage operations and partner workflows end-to-end.',
     stack: ['Next.js', 'Auth', 'Admin UI'],
-    live: null,
+    live: 'https://www.txmxboxing.com/',
     repo: 'https://github.com/434media/next-txmx',
     slug: 'next-txmx',
   },
@@ -59,7 +59,7 @@ const PROJECTS: Project[] = [
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group flex flex-col border border-border bg-background hover:border-rose/40 transition-colors">
-      <div className="relative aspect-[16/10] bg-surface overflow-hidden border-b border-border">
+      <div className="relative aspect-16/10 bg-surface overflow-hidden border-b border-border">
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 text-center px-6">
           <span className="font-mono text-[10px] tracking-widest uppercase text-foreground/30">
             ▸ {project.slug}.png
