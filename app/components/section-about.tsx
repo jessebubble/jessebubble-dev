@@ -33,7 +33,7 @@ export default function SectionAbout() {
             [
               { label: 'based', value: 'San Antonio, TX' },
               { label: 'role', value: 'Founder & Dev' },
-              { label: 'stack', value: 'AI Models · Next · Firebase' },
+              { label: 'stack', value: 'Claude · Next · Firebase' },
               {
                 label: 'status',
                 value: 'Open to work',

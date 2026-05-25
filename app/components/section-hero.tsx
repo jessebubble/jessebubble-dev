@@ -37,7 +37,7 @@ export default function SectionHero() {
         transition={{ duration: 0.6, delay: 0.5 }}
       >
         <span className="font-mono text-[10px] tracking-widest uppercase text-white/40">
-          ▸ devsa · digital canvas
+          ▸ devsa · community
         </span>
       </motion.div>
 
