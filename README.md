@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+   .─────────────────────.
+  (   jessebubble.dev     )
+   `────────────╲─────────'
+                 ╲
+                  ╲   ┌──────────────────────┐
+                   ╲  │ ● ● ●   ~/portfolio  │
+                    ╲ ├──────────────────────┤
+                     ╲│ > whoami             │
+                      │ jessebubble          │
+                      │                      │
+                      │ > now                │
+                      │ design · workflows   │
+                      │       · agents       │
+                      │                      │
+                      │ > _                  │
+                      └──────────────────────┘
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Find your people. Build your future.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Personal site for **jessebubble** — software developer & community architect in San Antonio, TX. Founder of [DEVSA](https://devsa.community), lead developer at [434 Media](https://434media.com).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Currently focused on design, workflows, and agents.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Next.js 16** — App Router, Turbopack
+- **React 19**
+- **TypeScript 5**
+- **Tailwind 4**
+- **motion** — animation
+- **@chenglou/pretext** — grapheme-aware text layout (used in `/lab`)
+- **Geist** — mono + pixel font families
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Routes
 
-## Deploy on Vercel
+- `/` — hero · about · now · work · contact (single-page scroll)
+- `/lab` — interactive Verlet-physics bio. Drag any unlocked letter. Press `F` to toggle gravity.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Easter egg
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Press `` ` `` or `~` anywhere on the site to open the terminal.
+
+Commands: `about`, `work`, `contact`, `help`, `clear`.
+
+## Structure
+
+```
+app/
+├── page.tsx                    # composes the sections
+├── layout.tsx                  # root layout + metadata
+├── globals.css                 # tokens + scanline/glow effects
+├── icon.tsx                    # favicon
+├── opengraph-image.tsx         # OG card
+├── lab/
+│   ├── layout.tsx
+│   └── page.tsx                # verlet physics demo
+└── components/
+    ├── section-hero.tsx        # full-bleed photo, name lockup
+    ├── section-about.tsx
+    ├── section-now.tsx         # current focus
+    ├── section-work.tsx        # project cards
+    ├── section-contact.tsx
+    ├── terminal.tsx            # terminal UI
+    ├── mobile-terminal.tsx     # drawer wrapper
+    ├── terminal-easter-egg.tsx # ` keystroke handler
+    ├── terminal-icon.tsx
+    └── physics-text.tsx        # verlet integration on /lab
+```
+
+Sections are server components; client islands are scoped to `section-hero` (motion), the terminal stack, and the physics demo.
+
+## Running locally
+
+```bash
+npm install
+npm run dev          # next dev (Turbopack)
+npm run build        # production build
+npm start            # serve production build
+npm run lint         # eslint
+```
+
+Open http://localhost:3000.

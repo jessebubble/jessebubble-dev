@@ -192,6 +192,14 @@ export default function Terminal() {
           accent: 'bg-rose-dim',
           icon: '◇',
         },
+        {
+          title: 'TXMX',
+          description: 'Custom platform with creative UI, role-based auth, and admin dashboards — built to manage operations and partner workflows end-to-end.',
+          url: 'https://github.com/434media/next-txmx',
+          tag: 'Code',
+          accent: 'bg-foreground/40',
+          icon: '▽',
+        },
       ];
 
       return (
@@ -237,11 +245,11 @@ export default function Terminal() {
           {/* Headshot */}
           <div className="relative shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden border border-border">
             <img
-              src="/hat-jesse-headshot.jpg"
+              src="/jesse-speaking.jpg"
               alt="jessebubble"
-              className="w-full h-full object-cover object-top grayscale contrast-125 brightness-110"
+              className="w-full h-full object-cover grayscale"
+              style={{ objectPosition: '78% 32%' }}
             />
-            <div className="absolute inset-0 bg-rose/10 mix-blend-multiply" />
           </div>
           {/* Bio */}
           <div className="flex flex-col gap-1.5 min-w-0">
