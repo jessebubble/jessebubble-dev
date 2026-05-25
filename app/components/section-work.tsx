@@ -13,10 +13,10 @@ const PROJECTS: Project[] = [
   {
     title: 'DEVSA',
     role: 'Founder & Lead Organizer',
-    tag: 'Community',
+    tag: 'Community Platform',
     description:
-      'Unifying the San Antonio tech ecosystem. Strategic partnerships with Geekdom, Tech Bloc, UTSA UC, PyTexas Foundation, and the Latina Leadership Institute — mobilizing resources for local builders.',
-    stack: ['Bounties', 'Partnerships', 'Events'],
+      'Architected the platform end-to-end — Next.js + Firebase, role-based admin with custom rich-text editor, RSVP capture, community calendar, and bounty system. Unified 20+ tech groups through partnerships with Geekdom, Tech Bloc, UTSA, and the PyTexas Foundation.',
+    stack: ['Next.js', 'Firebase', 'Stripe', 'Resend'],
     live: 'https://devsa.community',
     repo: 'https://github.com/devsanantonio/next-devsa',
     slug: 'devsa',
@@ -26,8 +26,8 @@ const PROJECTS: Project[] = [
     role: 'Lead Developer & Technical Architect',
     tag: 'Agency Platform',
     description:
-      'Digital platform for the agency — editorial storytelling, design system, and custom CMS powering work for venture-backed startups and ecosystem leaders.',
-    stack: ['Next.js', 'Claude Code', 'TailwindCSS', 'Firebase'],
+      'Digital platform for the agency plus the internal operating system: editorial CMS, custom CRM with Apollo lead generation, event management, and project/task management powering day-to-day operations.',
+    stack: ['Next.js', 'TailwindCSS', 'Firebase', 'Apollo'],
     live: 'https://434media.com',
     repo: 'https://github.com/434media/next-434media',
     slug: 'next-434media',
@@ -37,7 +37,7 @@ const PROJECTS: Project[] = [
     role: 'Full-stack Engineer',
     tag: 'Event Platform',
     description:
-      "Engineered the digital presence for SA's largest non-dilutive $100K pitch competition and multi-track community summit. Custom auth, admin dashboards, attendee flows.",
+      "Engineered the digital infrastructure for SA's largest non-dilutive $100K pitch competition. Custom admin portal with role-based auth, content management, and live voting for the Tech Fuel competition.",
     stack: ['Next.js', 'Firebase', 'Admin UI', 'Adobe Illustrator'],
     live: 'https://www.sanantoniotechday.com',
     repo: 'https://github.com/434media/techday',
@@ -46,10 +46,10 @@ const PROJECTS: Project[] = [
   {
     title: 'TXMX Boxing',
     role: 'Lead Developer',
-    tag: 'Custom Platform',
+    tag: 'Live Event Platform',
     description:
-      'Custom platform with creative UI, role-based auth, and admin dashboards — built to manage operations and partner workflows end-to-end.',
-    stack: ['Next.js', 'Auth', 'Admin UI'],
+      'Live event platform for boxing — leaderboards, fight pictures, and real-time props + polls during live boxing events. Custom admin and operations workflows.',
+    stack: ['Next.js', 'Realtime', 'Admin UI'],
     live: 'https://www.txmxboxing.com/',
     repo: 'https://github.com/434media/next-txmx',
     slug: 'next-txmx',
@@ -59,31 +59,6 @@ const PROJECTS: Project[] = [
 function ProjectCard({ project }: { project: Project }) {
   return (
     <article className="group flex flex-col border border-border bg-background hover:border-rose/40 transition-colors">
-      <div className="relative aspect-16/10 bg-surface overflow-hidden border-b border-border">
-        <div className="absolute inset-0 flex flex-col items-center justify-center gap-1.5 text-center px-6">
-          <span className="font-mono text-[10px] tracking-widest uppercase text-foreground/30">
-            ▸ {project.slug}.png
-          </span>
-          <span className="font-mono text-[9px] tracking-widest uppercase text-foreground/20">
-            asset coming soon
-          </span>
-        </div>
-        <div
-          className="absolute inset-0 opacity-40 pointer-events-none"
-          style={{
-            backgroundImage:
-              'radial-gradient(circle, rgba(0,0,0,0.05) 1px, transparent 1px)',
-            backgroundSize: '14px 14px',
-          }}
-        />
-        <div className="absolute top-3 left-3 font-mono text-[9px] tracking-widest uppercase text-foreground/30">
-          <span className="text-rose/50">▸</span> img
-        </div>
-        <div className="absolute bottom-3 right-3 font-mono text-[9px] tracking-widest uppercase text-foreground/30">
-          16:10
-        </div>
-      </div>
-
       <div className="flex flex-col gap-3 p-6 sm:p-8 flex-1">
         <div className="flex items-start justify-between gap-3">
           <h3 className="font-pixel text-xl sm:text-2xl text-foreground tracking-tight leading-tight">
