@@ -51,10 +51,10 @@ export default function SectionContact() {
               email
             </span>
             <a
-              href="mailto:jesse@devsa.community"
+              href="mailto:jesseovr@gmail.com"
               className="font-pixel text-base sm:text-lg text-background hover:text-rose transition-colors break-all"
             >
-              jesse@devsa.community
+              jesseovr@gmail.com
             </a>
           </div>
           <div>
@@ -96,6 +96,10 @@ export default function SectionContact() {
           </span>
           <span className="font-mono text-[10px] tracking-widest uppercase text-background/30">
             press <kbd className="text-background/60">`</kbd> for terminal ·{' '}
+            <Link href="/resume" className="hover:text-rose transition-colors">
+              /resume
+            </Link>{' '}
+            ·{' '}
             <Link href="/lab" className="hover:text-rose transition-colors">
               /lab
             </Link>

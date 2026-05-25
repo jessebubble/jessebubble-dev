@@ -4,6 +4,7 @@ import SectionNow from './components/section-now';
 import SectionWork from './components/section-work';
 import SectionContact from './components/section-contact';
 import TerminalEasterEgg from './components/terminal-easter-egg';
+import StickyResumeChip from './components/sticky-resume-chip';
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <SectionNow />
       <SectionWork />
       <SectionContact />
+      <StickyResumeChip />
       <TerminalEasterEgg />
     </div>
   );

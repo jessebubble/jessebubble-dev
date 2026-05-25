@@ -54,8 +54,9 @@ export default function SectionHero() {
           Find your people. Build your future.
         </p>
         <p className="font-mono text-[11px] sm:text-xs text-white/40 mt-3 max-w-md leading-relaxed">
-          Software developer & community architect. Building the bridges that
-          turn regional potential into measurable impact.
+          Software developer & ecosystem architect. I build custom web
+          experiences — interfaces, APIs, full-stack flows — that turn
+          regional potential into measurable impact.
         </p>
       </motion.div>
     </section>

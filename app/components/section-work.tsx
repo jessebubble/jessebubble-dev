@@ -12,7 +12,7 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     title: 'DEVSA',
-    role: 'Founder & Community Architect',
+    role: 'Founder & Lead Organizer',
     tag: 'Community',
     description:
       'Unifying the San Antonio tech ecosystem. Strategic partnerships with Geekdom, Tech Bloc, UTSA UC, PyTexas Foundation, and the Latina Leadership Institute — mobilizing resources for local builders.',

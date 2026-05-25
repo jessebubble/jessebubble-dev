@@ -211,3 +211,17 @@ body {
   color: var(--rose);
   cursor: grabbing;
 }
+
+/* Print defaults — affects /resume Save as PDF */
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}

@@ -16,15 +16,17 @@ export default function SectionAbout() {
 
         <h2 className="font-pixel text-3xl sm:text-4xl xl:text-5xl text-foreground tracking-tight leading-tight mb-8">
           Software Developer &<br />
-          <span className="text-rose">Community Architect.</span>
+          <span className="text-rose">Ecosystem Architect.</span>
         </h2>
 
         <div className="space-y-5 text-base sm:text-lg text-foreground/70 leading-relaxed">
           <p>
-            San Antonio native building the technical infrastructure that
-            bridges creative strategy and high-stakes deployment — 
-            deepening local connection through <span className="text-foreground font-medium">DEVSA</span>{' '} 
-            while engineering the custom workflows and striking interfaces that power brand storytelling at <span className="text-foreground font-medium">434 MEDIA</span>.
+            San Antonio native and full-stack web developer. I design
+            custom browser experiences backed by real APIs, bridging
+            creative strategy and high-stakes deployment — deepening local
+            connection through <span className="text-foreground font-medium">DEVSA</span>{' '}
+            while engineering the custom workflows and striking interfaces
+            that power brand storytelling at <span className="text-foreground font-medium">434 MEDIA</span>.
           </p>
         </div>
 
