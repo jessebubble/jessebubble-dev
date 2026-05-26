@@ -1,15 +1,15 @@
 const FOCUS = [
   {
     label: 'Design',
-    body: 'Visual systems and interfaces that feel inevitable. Editorial typography, considered motion, and brand-first product UI that respects the work it carries.',
+    body: 'Making the web feel intentional, not incidental, by using UI and the browser to tell stories — Editorial typography and scroll-based design fundamentals.',
   },
   {
     label: 'Workflows',
-    body: 'Internal tooling and admin dashboards that turn operational chaos into shipped outcomes — partner pipelines, content systems, event ops, custom auth.',
+    body: 'Streamlined, real-world transactions — partner pipelines, content systems, event ops, and custom auth. Modular systems that compound into shipped outcomes.',
   },
   {
     label: 'Agents',
-    body: 'Practical agent workflows that compress weeks of execution into hours. Building with Claude, MCP, and small composable tools that do real work.',
+    body: 'Wrapping workflows in autonomous loops — compressing weeks of execution into hours. Built with Claude, MCP, and small, composable tools that do real work.',
   },
 ];
 
@@ -30,7 +30,7 @@ export default function SectionNow() {
         </div>
 
         <h2 className="font-pixel text-3xl sm:text-4xl xl:text-5xl text-foreground tracking-tight leading-tight mb-16 sm:mb-20 max-w-3xl">
-          Actively building and learning across:
+          Stories. Transactions. Loops.
         </h2>
 
         <div className="grid gap-10 sm:gap-12 sm:grid-cols-3">
