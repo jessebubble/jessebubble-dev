@@ -83,7 +83,7 @@ export const COMMANDS: CommandDef[] = [
       { kind: 'kv', key: 'email', value: 'jesseovr@gmail.com' },
       { kind: 'kv', key: 'phone', value: '210.816.1144' },
       { kind: 'kv', key: 'calendar', value: 'book a 30-min call' },
-      { kind: 'link', label: 'calendar.app.google/GGGGQiP9rCG4wtk79', href: 'https://calendar.app.google/GGGGQiP9rCG4wtk79', external: true },
+      { kind: 'link', label: 'calendar.google.com/appointments', href: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ25O6CZahJZp7SHsfNznoZZFlf6VW6VfzFL3__oN0rrmAP3bLo660A4dZV9zuJXx-qR-1_Vwu-q?gv=true', external: true },
       { kind: 'separator' },
       { kind: 'kv', key: 'github', value: '@jessebubble' },
       { kind: 'kv', key: 'linkedin', value: '/in/jessebubble' },

@@ -39,7 +39,7 @@ export default function SectionAbout() {
               {
                 label: 'status',
                 value: 'Open to work',
-                href: 'https://calendar.app.google/GGGGQiP9rCG4wtk79',
+                href: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ25O6CZahJZp7SHsfNznoZZFlf6VW6VfzFL3__oN0rrmAP3bLo660A4dZV9zuJXx-qR-1_Vwu-q?gv=true',
                 hint: 'book a 30-min call',
               },
             ] as { label: string; value: string; href?: string; hint?: string }[]
