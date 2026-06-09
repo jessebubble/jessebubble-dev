@@ -76,11 +76,11 @@ Sections are server components; client islands are scoped to `section-hero` (mot
 ## Running locally
 
 ```bash
-npm install
-npm run dev          # next dev (Turbopack)
-npm run build        # production build
-npm start            # serve production build
-npm run lint         # eslint
+pnpm install
+pnpm dev             # next dev (Turbopack)
+pnpm build           # production build
+pnpm start           # serve production build
+pnpm lint            # eslint
 ```
 
 Open http://localhost:3000.
