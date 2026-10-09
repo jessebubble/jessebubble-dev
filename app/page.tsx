@@ -19,8 +19,7 @@ function ProjectLink({ slug, children }: { slug: string; children?: string }) {
   return (
     <Link
       href={`/work/${slug}`}
-      className="text-link"
-      style={logoCursor(slug)}
+      className={`text-link ${logoCursor(slug)}`}
     >
       {children ?? project.title}
     </Link>
@@ -92,8 +91,7 @@ export default function Home() {
                 <Link
                   key={p.slug}
                   href={`/work/${p.slug}`}
-                  style={logoCursor(p.slug)}
-                  className="grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-5 py-3 border-b border-border"
+                  className={`grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-5 py-3 border-b border-border ${logoCursor(p.slug)}`}
                 >
                   <span>{p.title}</span>
                   <span className="text-[13px] text-nav whitespace-nowrap">

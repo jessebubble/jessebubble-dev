@@ -232,8 +232,9 @@ export const PROJECTS: Project[] = [
 ];
 
 // Hovering a project link swaps the pointer for that project's mark
+// (classes in globals.css serve a sharper 2x image on high-density screens)
 export function logoCursor(slug: string) {
-  return { cursor: `url(/cursors/${slug}.png) 16 16, pointer` };
+  return `logo-cursor-${slug}`;
 }
 
 export function getProject(slug: string) {

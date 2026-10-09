@@ -66,6 +66,37 @@ body {
   opacity: 1;
 }
 
+/* Project logo cursors: 32px, with a 64px version for high-density screens */
+.logo-cursor-devsa {
+  cursor: url(/cursors/devsa.png) 16 16, pointer;
+  cursor: -webkit-image-set(url(/cursors/devsa.png) 1x, url(/cursors/devsa@2x.png) 2x) 16 16, pointer;
+  cursor: image-set(url(/cursors/devsa.png) 1x, url(/cursors/devsa@2x.png) 2x) 16 16, pointer;
+}
+
+.logo-cursor-next-sasw {
+  cursor: url(/cursors/next-sasw.png) 16 16, pointer;
+  cursor: -webkit-image-set(url(/cursors/next-sasw.png) 1x, url(/cursors/next-sasw@2x.png) 2x) 16 16, pointer;
+  cursor: image-set(url(/cursors/next-sasw.png) 1x, url(/cursors/next-sasw@2x.png) 2x) 16 16, pointer;
+}
+
+.logo-cursor-next-angels {
+  cursor: url(/cursors/next-angels.png) 16 16, pointer;
+  cursor: -webkit-image-set(url(/cursors/next-angels.png) 1x, url(/cursors/next-angels@2x.png) 2x) 16 16, pointer;
+  cursor: image-set(url(/cursors/next-angels.png) 1x, url(/cursors/next-angels@2x.png) 2x) 16 16, pointer;
+}
+
+.logo-cursor-next-434media {
+  cursor: url(/cursors/next-434media.png) 16 16, pointer;
+  cursor: -webkit-image-set(url(/cursors/next-434media.png) 1x, url(/cursors/next-434media@2x.png) 2x) 16 16, pointer;
+  cursor: image-set(url(/cursors/next-434media.png) 1x, url(/cursors/next-434media@2x.png) 2x) 16 16, pointer;
+}
+
+.logo-cursor-techday {
+  cursor: url(/cursors/techday.png) 16 16, pointer;
+  cursor: -webkit-image-set(url(/cursors/techday.png) 1x, url(/cursors/techday@2x.png) 2x) 16 16, pointer;
+  cursor: image-set(url(/cursors/techday.png) 1x, url(/cursors/techday@2x.png) 2x) 16 16, pointer;
+}
+
 /* Scanline effect — rose tinted */
 .scanline::after {
   content: '';

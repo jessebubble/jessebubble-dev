@@ -139,8 +139,7 @@ export default async function ProjectPage({ params }: Props) {
           </Link>
           <Link
             href={`/work/${next.slug}`}
-            style={logoCursor(next.slug)}
-            className="text-link text-foreground"
+            className={`text-link text-foreground ${logoCursor(next.slug)}`}
           >
             Next: {next.title}
           </Link>
