@@ -134,7 +134,7 @@ export default async function Image() {
               maxWidth: 720,
             }}
           >
-            Software developer & ecosystem architect · San Antonio, TX
+            Full-stack web developer · San Antonio, TX
           </div>
         </div>
       </div>

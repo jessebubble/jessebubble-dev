@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { GeistPixelSquare, GeistPixelGrid, GeistPixelCircle, GeistPixelTriangle, GeistPixelLine } from 'geist/font/pixel';
 import "./globals.css";
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | jessebubble",
   },
   description:
-    "Find your people. Build your future. San Antonio native and software developer bridging creativity and technical execution.",
+    "Jesse Hernandez (jessebubble), a full-stack web developer in San Antonio, TX. Designs and builds production Next.js platforms end to end. Founder of DEVSA.",
   keywords: [
     "jessebubble",
     "developer",
@@ -26,6 +27,8 @@ export const metadata: Metadata = {
     "San Antonio",
     "software engineer",
     "web developer",
+    "full-stack developer",
+    "freelance",
     "React",
     "Next.js",
   ],
@@ -38,13 +41,13 @@ export const metadata: Metadata = {
     siteName: "jessebubble",
     title: "jessebubble — Developer Portfolio",
     description:
-      "Find your people. Build your future. San Antonio native and software developer bridging creativity and technical execution.",
+      "Jesse Hernandez (jessebubble), a full-stack web developer in San Antonio, TX. Designs and builds production Next.js platforms end to end. Founder of DEVSA.",
   },
   twitter: {
     card: "summary_large_image",
     title: "jessebubble — Developer Portfolio",
     description:
-      "Find your people. Build your future. San Antonio native and software developer bridging creativity and technical execution.",
+      "Jesse Hernandez (jessebubble), a full-stack web developer in San Antonio, TX. Designs and builds production Next.js platforms end to end. Founder of DEVSA.",
     creator: "@jessebubble",
   },
   robots: {
@@ -69,7 +72,7 @@ export default function RootLayout({
     <html
       lang="en"
       style={{ colorScheme: 'light' }}
-      className={`${GeistMono.variable} ${GeistPixelSquare.variable} ${GeistPixelGrid.variable} ${GeistPixelCircle.variable} ${GeistPixelTriangle.variable} ${GeistPixelLine.variable} h-full antialiased`}
+      className={`${GeistSans.variable} ${GeistMono.variable} ${GeistPixelSquare.variable} ${GeistPixelGrid.variable} ${GeistPixelCircle.variable} ${GeistPixelTriangle.variable} ${GeistPixelLine.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-background">{children}</body>
     </html>

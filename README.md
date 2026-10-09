@@ -32,25 +32,20 @@ Currently focused on design, workflows, and agents.
 - **TypeScript 5**
 - **Tailwind 4**
 - **motion** — animation
-- **@chenglou/pretext** — grapheme-aware text layout (used in `/lab`)
 - **Geist** — mono + pixel font families
 
 ## Routes
 
-- `/` — hero · about · now · work · contact (single-page scroll)
-- `/lab` — interactive Verlet-physics bio. Drag any unlocked letter. Press `F` to toggle gravity.
-
-## Easter egg
-
-Press `` ` `` or `~` anywhere on the site to open the terminal.
-
-Commands: `about`, `work`, `contact`, `help`, `clear`.
+- `/` — bio, projects, and contact beside a sticky photo panel
+- `/work/[slug]` — one page per project: surfaces, stack, design, and code to read
+- `/lab` — interactive Verlet-physics bio. Grab any letter and pull. `F` lets it fall, `G` toggles gravity, `R` resets.
 
 ## Structure
 
 ```
 app/
-├── page.tsx                    # composes the sections
+├── page.tsx                    # home: bio, projects, contact
+├── work/[slug]/page.tsx        # per-project pages
 ├── layout.tsx                  # root layout + metadata
 ├── globals.css                 # tokens + scanline/glow effects
 ├── icon.tsx                    # favicon
@@ -59,19 +54,12 @@ app/
 │   ├── layout.tsx
 │   └── page.tsx                # verlet physics demo
 └── components/
-    ├── section-hero.tsx        # full-bleed photo, name lockup
-    ├── section-about.tsx
-    ├── section-now.tsx         # current focus
-    ├── section-work.tsx        # project cards
-    ├── section-contact.tsx
-    ├── terminal.tsx            # terminal UI
-    ├── mobile-terminal.tsx     # drawer wrapper
-    ├── terminal-easter-egg.tsx # ` keystroke handler
-    ├── terminal-icon.tsx
     └── physics-text.tsx        # verlet integration on /lab
+lib/
+└── projects.ts                 # project data
 ```
 
-Sections are server components; client islands are scoped to `section-hero` (motion), the terminal stack, and the physics demo.
+Pages are server components; client islands are the physics demo on /lab and the print controls on /resume.
 
 ## Running locally
 
