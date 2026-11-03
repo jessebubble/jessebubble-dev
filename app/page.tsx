@@ -19,7 +19,7 @@ function ProjectLink({ slug, children }: { slug: string; children?: string }) {
   return (
     <Link
       href={`/work/${slug}`}
-      className={`text-link ${logoCursor(slug)}`}
+      className="text-link"
     >
       {children ?? project.title}
     </Link>
@@ -64,17 +64,21 @@ export default function Home() {
 
           <section aria-label="Biography" className="flex flex-col gap-5">
             <p className="text-pretty">
-              San Antonio native, full-stack web developer, and ecosystem
-              architect. I design and build production Next.js platforms end
-              to end: public sites, admin tools, APIs, payments, email, and
-              scheduled jobs. I work freelance and develop with Claude Code.
+              San Antonio native, full-stack software engineer, and ecosystem
+              architect. I ship production Next.js apps for real users on
+              Vercel: public sites, internal tools, APIs, payments, and AI
+              workflows built with the AI SDK and Claude. I develop with Claude
+              Code.
             </p>
             <p className="text-pretty">
               I founded <ProjectLink slug="devsa" />, the bridge for San
-              Antonio&apos;s developer community. As a freelancer I&apos;ve
-              built <ProjectLink slug="next-sasw" /> for Geekdom and the
-              member portal for <ProjectLink slug="next-angels" />. Before
-              that, under contract, I built the pitch platform for{' '}
+              Antonio&apos;s developer community, where I host events and put
+              local developers on stage. As a freelancer, I partnered with
+              Geekdom to build <ProjectLink slug="next-sasw" />. Before that,
+              under contract with{' '}
+              <ProjectLink slug="next-434media">434 MEDIA</ProjectLink>, I built
+              the agency&apos;s go-to-market tools, the member portal for{' '}
+              <ProjectLink slug="next-angels" />, and the pitch platform for{' '}
               <ProjectLink slug="techday" />.
             </p>
           </section>

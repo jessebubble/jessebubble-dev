@@ -4,7 +4,6 @@ import { notFound } from 'next/navigation';
 import {
   PROJECTS,
   getProject,
-  logoCursor,
   type StackLayer,
 } from '@/lib/projects';
 
@@ -139,7 +138,7 @@ export default async function ProjectPage({ params }: Props) {
           </Link>
           <Link
             href={`/work/${next.slug}`}
-            className={`text-link text-foreground ${logoCursor(next.slug)}`}
+            className="text-link text-foreground"
           >
             Next: {next.title}
           </Link>

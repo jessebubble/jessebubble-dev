@@ -24,7 +24,7 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     title: 'San Antonio Startup + Tech Week',
-    role: 'Lead Developer & Designer',
+    role: 'Lead Engineer & Designer',
     engagement: 'Freelance',
     client: 'Geekdom',
     timeline: '2026',
@@ -65,9 +65,9 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'Alamo Ventures',
-    role: 'Lead Developer',
-    engagement: 'Freelance',
-    client: 'Alamo Ventures',
+    role: 'Lead Engineer',
+    engagement: 'Contract via 434 MEDIA',
+    client: 'Alamo Ventures, via 434 MEDIA',
     timeline: '2026',
     context: [
       'Alamo Ventures was formerly Alamo Angels. The member portal began as a front-end prototype running on mock data and grew into a production app with real authentication, a Firestore database, Stripe billing, and an automated news pipeline. It shares its database with a separate deal-flow evaluation app.',
@@ -105,13 +105,13 @@ export const PROJECTS: Project[] = [
   },
   {
     title: '434 MEDIA',
-    role: 'Web Developer',
+    role: 'Software Engineer',
     engagement: 'Contract',
     client: '434 MEDIA',
     timeline: 'Jan 2025 – 2026',
     context: [
       '434 MEDIA is a San Antonio media agency. Under contract from January 2025, I built the internal operating system the team runs on every day, alongside the agency’s public site.',
-      'The same contract covered client work, including the platform for San Antonio Tech Day.',
+      'The same contract covered client work, including the member portal for Alamo Ventures and the platform for San Antonio Tech Day.',
     ],
     built: [
       'CRM with a pipeline and a Customer 360 view',
@@ -122,7 +122,7 @@ export const PROJECTS: Project[] = [
     ],
     tag: 'Agency Platform',
     summary:
-      "The agency's public site and the internal operating system the team runs on every day.",
+      "The agency's go-to-market systems (CRM, AI prospecting, outreach, and the scheduled jobs that keep analytics and email lists in sync), alongside its public site.",
     surfaces: [
       'agency site',
       'CRM + pipeline',
@@ -147,13 +147,13 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'DEVSA',
-    role: 'Founder & Lead Organizer',
+    role: 'Founder & Executive Director',
     engagement: 'Nonprofit',
     client: 'DEVSA (founder)',
     timeline: '2023 – present',
     context: [
       'DEVSA started as a Discord server in September 2023 and became a 501(c)(3) six months later. It doesn’t replace San Antonio’s tech groups; it connects them, with one shared calendar and one public directory.',
-      'I founded DEVSA and built the platform that runs it. For SA Startup + Tech Week 2026, DEVSA activated 13 events, ran the Give-a-LOT computer donation drive with learnOPENtech, and put 7 speakers on the main stage at Texas Public Radio.',
+      'I founded DEVSA and built the platform that runs it. Beyond the calendar and directory, DEVSA leads four conferences (The Model, Access Granted, PySanAntonio, and More Human Than Human) and partner pop-ups like Zero to Agent with Vercel. For SA Startup + Tech Week 2026, DEVSA activated 13 events, ran the Give-a-LOT computer donation drive with learnOPENtech, and put 7 speakers on the main stage at Texas Public Radio.',
     ],
     built: [
       'Community calendar published as ICS and JSON feeds and an embeddable view',
@@ -165,7 +165,7 @@ export const PROJECTS: Project[] = [
     ],
     tag: 'Community Platform',
     summary:
-      "The bridge for San Antonio's developer community: 23 community groups on one calendar, backed by 15 partners including Geekdom, Tech Bloc, UTSA, and the PyTexas Foundation.",
+      "Community infrastructure for San Antonio tech: one calendar and public directory for 25 tech groups, backed by 16 partners including Geekdom, Tech Bloc, UTSA, and the PyTexas Foundation.",
     surfaces: [
       'community site',
       'organizer admin',
@@ -190,7 +190,7 @@ export const PROJECTS: Project[] = [
   },
   {
     title: 'San Antonio Tech Day',
-    role: 'Web Developer',
+    role: 'Software Engineer',
     engagement: 'Contract via 434 MEDIA',
     client: 'San Antonio Tech Day, via 434 MEDIA',
     timeline: '2026',

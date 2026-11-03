@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | jessebubble",
   },
   description:
-    "Jesse Hernandez (jessebubble), a full-stack web developer in San Antonio, TX. Designs and builds production Next.js platforms end to end. Founder of DEVSA.",
+    "Jesse Hernandez (jessebubble), a full-stack software engineer in San Antonio, TX. Ships production Next.js apps and AI workflows on Vercel. Founder of DEVSA.",
   keywords: [
     "jessebubble",
     "developer",
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
     "software engineer",
     "web developer",
     "full-stack developer",
+    "full-stack software engineer",
     "freelance",
     "React",
     "Next.js",
@@ -42,13 +43,13 @@ export const metadata: Metadata = {
     siteName: "jessebubble",
     title: "jessebubble — Developer Portfolio",
     description:
-      "Jesse Hernandez (jessebubble), a full-stack web developer in San Antonio, TX. Designs and builds production Next.js platforms end to end. Founder of DEVSA.",
+      "Jesse Hernandez (jessebubble), a full-stack software engineer in San Antonio, TX. Ships production Next.js apps and AI workflows on Vercel. Founder of DEVSA.",
   },
   twitter: {
     card: "summary_large_image",
     title: "jessebubble — Developer Portfolio",
     description:
-      "Jesse Hernandez (jessebubble), a full-stack web developer in San Antonio, TX. Designs and builds production Next.js platforms end to end. Founder of DEVSA.",
+      "Jesse Hernandez (jessebubble), a full-stack software engineer in San Antonio, TX. Ships production Next.js apps and AI workflows on Vercel. Founder of DEVSA.",
     creator: "@jessebubble",
   },
   robots: {

@@ -6,37 +6,36 @@ import { GeistSansNonVariable } from 'geist/font/sans-non-variable';
 const EXPERIENCE = [
   {
     title: 'Freelance',
-    role: 'Full-Stack Web Developer (1099)',
+    role: 'Full-Stack Software Engineer (1099)',
     dates: '2026 – Present',
     location: 'San Antonio, TX',
     bullets: [
-      'Designed and built the San Antonio Startup + Tech Week 2026 platform for Geekdom: public site, staff admin, transactional check-in, and custom branded screens for the in-room TVs.',
-      'Designed the event’s visual identity and front-end design system: five color-coded tracks, color tokens checked against WCAG contrast, and a WebGL hero that falls back to a static mark for reduced motion.',
-      'Built the Alamo Ventures member portal and deal room (140+ accredited investors, $7M+ deployed): invite-only auth, Stripe dues with autopay and webhooks, and a Claude news pipeline with structured outputs and hash-based deduplication.',
+      'Partnered with Geekdom’s team to design and ship the San Antonio Startup + Tech Week 2026 platform on Next.js and Vercel: public site, staff admin, transactional check-in, and custom branded screens for the in-room TVs.',
+      'Designed the event’s visual identity and design system (color-coded tracks, WCAG-checked color tokens, a WebGL hero with a reduced-motion fallback) and built in SEO: structured data, OG images, a sitemap, and llms.txt.',
     ],
-    links: ['sasw.co', 'github.com/sasw-geekdom/next-sasw', 'jessebubble.dev/work/next-angels'],
+    links: ['sasw.co', 'github.com/sasw-geekdom/next-sasw'],
   },
   {
     title: '434 MEDIA',
-    role: 'Web Developer (Contract)',
+    role: 'Software Engineer (Contract)',
     dates: 'Jan 2025 – 2026',
     location: 'San Antonio, TX',
     bullets: [
-      'Engineered San Antonio Tech Day 2026: role-based admin, versioned site content, a multi-round pitch pipeline with email at each stage, and live public voting for the $100K Tech Fuel competition.',
-      'Built the agency operating system: CRM and pipeline, outreach sequences, a blog CMS, and nine scheduled jobs syncing GA4, Instagram, and Mailchimp.',
-      'Built AI prospecting where an LLM tool call turns plain-English requests into zod-validated Apollo search filters, with per-user credit budgets checked before every paid API call.',
+      'Built the Alamo Ventures member portal and deal room (140+ accredited investors, $7M+ deployed): invite-only auth, Stripe dues with autopay and webhooks, and an AI SDK pipeline where Claude curates portfolio news into a weekly digest.',
+      'Built the agency’s go-to-market systems: CRM and pipeline, outreach sequences, a blog CMS, and nine scheduled jobs syncing GA4, Instagram, and Mailchimp.',
+      'Automated sales prospecting with AI: an AI SDK tool call turns plain-English requests into validated Apollo searches, with per-user credit budgets checked before every paid API call.',
     ],
-    links: ['434media.com', 'sanantoniotechday.com'],
+    links: ['434media.com', 'jessebubble.dev/work/next-angels'],
   },
   {
     title: 'DEVSA',
-    role: 'Founder & Lead Organizer',
+    role: 'Founder & Executive Director',
     dates: 'Mar 2024 – Present',
     location: 'San Antonio, TX',
     bullets: [
-      'Founded and lead a 501(c)(3) that puts 23 community groups and 15 partners, including Geekdom, Tech Bloc, UTSA, and the PyTexas Foundation, on one shared calendar.',
-      'Built the platform end to end on Next.js and Firebase: role-based admin, RSVPs with confirmation email, ICS and contract-tested JSON calendar feeds, a weekly Discord digest, and a Stripe + Printify shop reconciled by a daily job.',
-      'For SA Startup + Tech Week 2026, activated 13 events, ran the Give-a-LOT computer donation drive with learnOPENtech, and put 7 speakers on the main stage at Texas Public Radio.',
+      'Founded and lead a 501(c)(3) that serves as community infrastructure for San Antonio tech: one calendar and public directory for 25 tech groups, 16 partners including Geekdom, Tech Bloc, UTSA, and the PyTexas Foundation, and four DEVSA-led conferences.',
+      'Built and open-sourced the platform on Next.js and Firebase: role-based admin, RSVPs with confirmation email, ICS and contract-tested JSON calendar feeds, a weekly Discord digest, and a Stripe + Printify shop.',
+      'Co-hosted Zero to Agent with Vercel, a pop-up on building AI agents. For SA Startup + Tech Week 2026, activated 13 events, ran the Give-a-LOT computer donation drive with learnOPENtech, and put 7 speakers on the main stage at Texas Public Radio.',
     ],
     links: ['devsa.community', 'github.com/devsanantonio/next-devsa'],
   },
@@ -55,23 +54,23 @@ const EXPERIENCE = [
 const SKILLS = [
   {
     area: 'Frontend',
-    items: 'TypeScript, JavaScript, React, Next.js, HTML, CSS, Tailwind CSS, responsive design, WebGL, Three.js',
+    items: 'TypeScript, JavaScript, React, Next.js (App Router, Server Components), HTML, CSS, Tailwind CSS, WebGL',
   },
   {
     area: 'Backend',
     items: 'Node.js, REST APIs, Firebase Auth, Firestore, Stripe webhooks, Resend, zod',
   },
   {
-    area: 'Tools',
-    items: 'Git, GitHub, Vercel (cron jobs, Blob, BotID, AI Gateway), Vitest',
-  },
-  {
     area: 'AI',
-    items: 'Claude Code (AI-assisted development), Claude API, Vercel AI SDK (structured outputs, tool calling), MCP',
+    items: 'AI SDK (structured outputs, tool calling), AI Gateway, Claude API, Claude Code, MCP',
   },
   {
-    area: 'Design',
-    items: 'Adobe Illustrator, design systems, accessibility (WCAG contrast, reduced motion)',
+    area: 'Platform',
+    items: 'Vercel (cron jobs, Blob, BotID, Analytics), Git, GitHub, Vitest',
+  },
+  {
+    area: 'Design & web',
+    items: 'design systems, accessibility (WCAG), SEO (structured data, OG images), Adobe Illustrator',
   },
 ];
 
@@ -118,7 +117,7 @@ export default function ResumePage() {
               Jesse Hernandez
             </h1>
             <p className="text-sm text-secondary print:text-black/75 mt-2">
-              Full-Stack Web Developer · San Antonio, TX
+              Full-Stack Software Engineer · San Antonio, TX
             </p>
           </div>
           <address className="text-[13px] text-secondary print:text-black/75 leading-relaxed not-italic text-left sm:text-right">
@@ -133,13 +132,12 @@ export default function ResumePage() {
         <section className="mt-5 print:mt-2.5">
           <SectionHeading>Summary</SectionHeading>
           <p className="text-sm leading-relaxed text-pretty print:text-[12.5px] print:leading-snug print:text-black">
-            Full-stack web developer who designs and builds production Next.js
-            platforms end to end: public sites, admin tools, REST APIs,
-            payments, email, and scheduled jobs. Shipped platforms for a
-            citywide tech conference, an angel investor network, a $100K pitch
-            competition, and an agency&apos;s operations. Develops with Claude
+            Full-stack software engineer who ships production Next.js apps
+            for real users on Vercel: public sites, internal tools, APIs,
+            payments, and AI workflows built with the AI SDK and Claude.
+            Works side by side with client teams and develops with Claude
             Code. Founder of DEVSA, San Antonio&apos;s developer community
-            nonprofit.
+            nonprofit, hosting events and putting local developers on stage.
           </p>
         </section>
 
